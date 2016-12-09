@@ -6,7 +6,7 @@ def shortname = jobshortname.substring(jobshortname.indexOf('-') + 1)
 def dockerImageName = shortname.substring(shortname.indexOf('-') + 1)
 def dockerRegistry = 'http://nexus.vcap.me:5000'
 def dockerRepository = 'yourrepository'
-def dockerCredentialsId = 'docker-login'
+def dockerCredentialsId = 'docker'
 
 node {
     stage('Checkout') {
