@@ -1,9 +1,11 @@
 node {
+    stage('Checkout') {
+        checkout scm
+    }
     stage('Test') {
         echo "Hallo"
         echo "aha"
     }
-
     stage('Test2') {
         echo "Leute"
     }
