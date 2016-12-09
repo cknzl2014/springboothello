@@ -1,6 +1,6 @@
 #!groovy
 
-def project = 'springboothello' //env.JOB_NAME.split('/').reverse()[1]
+def project = env.JOB_NAME.split('/').reverse()[1]
 def jobshortname = env.JOB_NAME.substring(env.JOB_NAME.lastIndexOf('/') + 1)
 def shortname = jobshortname.substring(jobshortname.indexOf('-') + 1)
 def dockerImageName = shortname.substring(shortname.indexOf('-') + 1)
