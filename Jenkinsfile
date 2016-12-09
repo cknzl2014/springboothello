@@ -31,7 +31,7 @@ node {
     stage('Docker Build') {
         docker.withRegistry(dockerRegistry, dockerCredentialsId) {
 	    def image = docker.build dockerRepository + "/" + dockerImageName, "--build-arg TAG=${dockerImageTag} ."
-	    image.push(dockerImageTag)
+	    //image.push(dockerImageTag)
 	    echo "*** Docker image successfully pushed to registry. ***"
 	}
     }
